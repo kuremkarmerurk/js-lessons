@@ -6,18 +6,18 @@ for(let i = 1; i < 3; i++ ){ // Задаю пользователю по 2 ра�
     let question1 = prompt("Введите обязательную статью расходов в этом месяце", "nothing"+i); // вопрос 1
     let question2 = prompt("Во сколько обойдется?", "0"); // вопрос 2
 
-    expenses[question1] = parseInt(question2); // добавляю новые свойства в объект
+    expenses[question1] = question2; // добавляю новые свойства в объект
 }
     
 let appData = {
-    budget : parseInt(money),
-    timeData : new Date(time),
+    budget : money,
+    timeData : time,
     expenses: expenses,
-    optionalExpenses : '',
+    optionalExpenses : {},
     income : [],
     savings : false,
 };
 
-alert(appData.budget/30); // бюджет на 1 день
+alert(+appData.budget/30); // бюджет на 1 день
 
 console.log(appData);
