@@ -12,6 +12,7 @@ let result = product**3;
 
 console.log(product);
 
+
 while (result >= 100){ 
     result = parseInt(result /= 10); 
 }
