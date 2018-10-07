@@ -37,12 +37,12 @@ for(let i = 0; i < 7; i++){
 
     let node = document.createElement("p");
     var textnode = document.createTextNode(week[i]);
-    if(i == 5 || i == 6){
-        node.style.fontStyle = "italic";
+    if(i == 5 || i == 6){        
+        node.style.fontWeight = "900";
     }
 
     if(i == (d.getDay() + 6) % 7){
-        node.style.fontWeight = "900";
+        node.style.fontStyle = "italic";
     }
     
     node.appendChild(textnode);
