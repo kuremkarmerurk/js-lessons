@@ -119,19 +119,19 @@ let appData = {
 
 // Создать функцию для определения обязательных расходов (chooseOptExpenses):
 
-//appData.chooseExpenses(2);
+appData.chooseExpenses(2);
 
 
-//appData.chooseOptExpenses(1); // просто для демонстрации, можно было бы и просто 3 написать
-//appData.chooseOptExpenses(2);
+appData.chooseOptExpenses(1); // просто для демонстрации, можно было бы и просто 3 написать
+appData.chooseOptExpenses(2);
 
 
 // Выаод данных
 
-//appData.moneyPerDay = appData.detectDayBudget(appData.budget);
-//console.log(appData);
-//console.log(appData.detectLevel(appData.moneyPerDay));
-//appData.checkSavings();
+appData.moneyPerDay = appData.detectDayBudget(appData.budget);
+console.log(appData);
+console.log(appData.detectLevel(appData.moneyPerDay));
+appData.checkSavings();
 
 appData.chooseIncome();
 console.log("Наша программа включает в себя данные: ");
