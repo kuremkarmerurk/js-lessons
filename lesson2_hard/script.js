@@ -50,13 +50,10 @@ for(let i = 0; i < 7; i++){
 
 }
 
-let arr = [];
+let arr = ["59135", "62756", "73554", "36292", "88171", "36308", "60781"];
 
 for(let i = 0; i < 7; i++){
-    arr[i] = String(getRndInteger(10,100000));
     if(+arr[i].charAt(0) == 3 || +arr[i].charAt(0) == 7){
         console.log(arr[i]);
     }    
 }
-
-console.log(arr);
