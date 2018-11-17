@@ -14,14 +14,24 @@ let appData = {
     let question1 = prompt("Введите обязательную статью расходов в этом месяце", "nothing"+i); // вопрос 1
     let question2 = prompt("Во сколько обойдется?", "0"); // вопрос 2
 
-    expenses[question1] = question2; // добавляю новые свойства в объект
+    // проверяю не пустые ли поля не нажата ли отмена и размер ввода
+    if(!!question1 && !!question2 && question1.length < 50 && question2.length < 50){
+        appData.expenses[question1] = question2; // добавляю новые свойства в объект
+    }else{
+        i--;
+    }
     i++;
 }
 do{
     let question1 = prompt("Введите обязательную статью расходов в этом месяце", "nothing"+i); // вопрос 1
     let question2 = prompt("Во сколько обойдется?", "0"); // вопрос 2
 
-    expenses[question1] = question2; // добавляю новые свойства в объект
+    // проверяю не пустые ли поля не нажата ли отмена и размер ввода
+    if(!!question1 && !!question2 && question1.length < 50 && question2.length < 50){
+        appData.expenses[question1] = question2; // добавляю новые свойства в объект
+    }else{
+        i--;
+    }
     i++;
 }while(i < 3)*/
 for(; i < 3; i++ ){ // Задаю пользователю по 2 раза вопросы
