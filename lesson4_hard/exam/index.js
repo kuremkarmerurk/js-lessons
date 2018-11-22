@@ -35,7 +35,7 @@ function getFriendlyNumbers(start, end) {
 }
 
 module.exports = {
-    firstName: 'Name',
-    secondName: 'Surname',
+    firstName: 'Василий',
+    secondName: 'Шаталкин',
     task: getFriendlyNumbers
 }
