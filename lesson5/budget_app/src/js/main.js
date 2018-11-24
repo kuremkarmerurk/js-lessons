@@ -56,3 +56,6 @@ let percent = document.querySelector("#percent");
 let year = document.querySelector('.year');
 let month = document.querySelector('.month');
 let day = document.querySelector('.day');
+
+
+debugger;
