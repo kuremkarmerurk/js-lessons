@@ -5,8 +5,7 @@ window.addEventListener('DOMContentLoaded', function(){
         x = Math.floor((Math.random() * (board.offsetWidth - 52)) + 2),
         stepX = Math.floor((Math.random() * 10) + 1),
         stepY = Math.floor((Math.random() * 10) + 1),
-        go = false,
-        requestId;
+        go = false;
 
     function drawBall() {
         let ball = document.createElement('div');
@@ -55,7 +54,6 @@ window.addEventListener('DOMContentLoaded', function(){
             go = true;
         }else{
             e.target.textContent= 'Go!';
-            requestId = undefined;
             go = false;
         }
     })
