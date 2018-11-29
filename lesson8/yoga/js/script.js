@@ -76,8 +76,8 @@ window.addEventListener('DOMContentLoaded', function(){
             minutes = 0,
             hours = 0;
         if ( t > 0 ){
-            seconds = Math.floor((t/1000) % 60),
-            minutes = Math.floor((t/1000/60) % 60),
+            seconds = Math.floor((t/1000) % 60);
+            minutes = Math.floor((t/1000/60) % 60);
             hours = Math.floor(t/(1000*60*60));
         }
         
