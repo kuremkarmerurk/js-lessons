@@ -45,12 +45,13 @@ window.addEventListener('DOMContentLoaded', function(){
                         step = 50,
                         scrollInterval = setInterval(go, 20);
                     function go() {
+                        step = ( Math.abs(destination) < step) ? Math.abs(destination) : step;
                         if (destination > 0) {
                             scrollBy(0, step);
-                            destination = ( destination - step > 0) ? destination - step : 0;
+                            destination = destination - step;
                         } else if (destination < 0) {
                             scrollBy(0,-step);
-                            destination = ( destination + step < 0) ? destination + step : 0;
+                            destination = destination + step;
                         } else {
                             clearInterval(scrollInterval);
                             window.location.hash = hash;
