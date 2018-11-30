@@ -111,16 +111,63 @@ window.addEventListener('DOMContentLoaded', function(){
     
     setClock('timer', deadline);
 
-    // Modal
+    // Modal   
 
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close'),
-        tabMore = document.querySelectorAll('.description-btn');
+        tabMore = document.querySelectorAll('.description-btn'),
+        md = new MobileDetect(window.navigator.userAgent);
 
     function openMore() {
+
+        let opacity = 0, step = 0;
+
+        function fade() {
+            opacity = opacity + 0.02;
+            overlay.style.opacity = opacity.toString();
+            if( opacity < 1 ){
+                requestAnimationFrame(fade);
+            }        
+        }
+
+        function detectIE() {
+            let ua = window.navigator.userAgent;
+            
+            let msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+              // IE 10 or older => return version number
+              return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+          
+            let trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+              // IE 11 => return version number
+              let rv = ua.indexOf('rv:');
+              return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+          
+            let edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+              // Edge (IE 12+) => return version number
+              return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            }
+          
+            // other browser
+            return false;
+        }
+
         overlay.style.display = "block";
         this.classList.add('more-splach');
+        
+        if(md.mobile()){
+            overlay.classList.remove('fade');
+        }  else if(!detectIE()) {
+            overlay.style.opacity = "0";
+            overlay.classList.remove('fade');
+            requestAnimationFrame(fade);
+        }  
+
         document.body.style.overflow = 'hidden';
     };
 
