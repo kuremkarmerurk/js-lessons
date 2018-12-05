@@ -1,0 +1,28 @@
+#phone{
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 14px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+  text-align: center;
+}
+#phone:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+body { 
+    width: 100vw;
+    height:100vh;
+    font-family: 'Open Sans', sans-serif;
+	background: url("img/cars-bg.jpg") no-repeat;
+	background-size: cover;
+}
+html { width: 100%; height:100%; overflow:hidden; }
