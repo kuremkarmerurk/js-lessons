@@ -188,7 +188,8 @@ window.addEventListener('DOMContentLoaded', function(){
         more.classList.remove('more-splach');
         document.body.style.overflow = '';
         document.querySelector('.main-form').style.display = 'block';
-        document.querySelector('.status').remove(); 
+        if (document.querySelector('.status')) { document.querySelector('.status').remove(); }
+         
     });
 
     // Form
