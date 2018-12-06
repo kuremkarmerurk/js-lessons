@@ -258,7 +258,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 statusImg.src = message.loading.img;
                 statusTxt.innerHTML = message.loading.txt;
                 overlay.style.display = "block";
-            } else if( request,this.readyState === 4 && request.status == 200){
+            } else if( request.readyState === 4 && request.status == 200){
                 statusImg.src = message.success.img;
                 statusTxt.innerHTML = message.success.txt;
                 overlay.style.display = "block";
