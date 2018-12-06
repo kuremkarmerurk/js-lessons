@@ -1,9 +1,9 @@
-#phone{
+.nav-input{
     text-align: center;
     background: rgba(0,0,0,0.3);
 	border: none;
 	outline: none;
-	padding: 10px;
+	padding: 7px;
 	font-size: 14px;
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
@@ -15,14 +15,64 @@
 	-o-transition: box-shadow .5s ease;
 	-ms-transition: box-shadow .5s ease;
 	transition: box-shadow .5s ease;
-  text-align: center;
+	text-align: center;
+	margin-right: 15px;
 }
-#phone:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+.nav-input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 body { 
-    width: 100vw;
+    width: 100%;
     height:100vh;
     font-family: 'Open Sans', sans-serif;
-	background: url("img/cars-bg.jpg") no-repeat;
+	background: url("img/cars-bg.jpg") no-repeat fixed;
 	background-size: cover;
 }
-html { width: 100%; height:100%; overflow:hidden; }
+
+
+.navbar {    justify-content: flex-end;}
+
+.car-wrapper{
+	padding: 10px;
+}
+
+.car{
+	background-color: #fff;
+	min-height: 460px;
+	padding: 5px;
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+
+.car img{
+	width: 95%;
+	display: block;
+	margin: 10px auto;
+	border-radius: 4px;
+
+}
+
+.car .name{
+	font-size: 1.5rem;
+    text-align: center;
+}
+
+.car .description{
+	width: 95%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.car .price{
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	width: 95%;
+	margin: 5px auto;
+	font-size: 20px;
+	font-weight: 900;
+	text-align: right;
+}

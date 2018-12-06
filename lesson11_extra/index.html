@@ -9,15 +9,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <select class="nav-input" id="land">
+                <option>Все</option>
+                <option>Германия</option>
+                <option>Франция</option>
+                <option>Италия</option>                
+        </select>
+        <select class="nav-input" id="sort">
+                <option>от А до Z</option>
+                <option>от Z до А</option>
+                <option>цены по возрастанию</option>
+                <option>цены по убыванию</option>
+        </select>
+        <button type="button" class="btn btn-outline-warning" id="go">GO!!</button>
+    </nav>
     <div class="container" >
-        <div class="row">
-            <div class="col-12">
-                    <input id = "phone" >
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                
+        <div class="row" id="field">
+            <div class="col-md-3 car-wrapper">
+              <div class="car">
+                  <img src="http://cdn.motorpage.ru/Photos/800/13F4.jpg" alt="">
+                  <hr>
+                  <h2 class="name">BMW M5</h2>
+                  <div class="description">is a high performance variant of the 5 Series executive car built by the Motorsport division of BMW. The first incarnation of the M5 was hand-built in 1986 on the 535i chassis with a modified engine from the M1 that made it the fastest production sedan at the time.[1] Versions of the M5 have been built from subsequent generations of the 5 Series platform.</div>
+                  <p class="price">61000</p>
+              </div>  
             </div>
         </div>        
     </div>
