@@ -68,8 +68,6 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             url: 'server.php',
-            dataType: 'json',
-            contentType: 'application/x-www-form-urlencoded',
             data: json,
             success: function() {
                 statusImg.src = message.success.img;
