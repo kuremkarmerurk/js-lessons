@@ -214,7 +214,6 @@ window.addEventListener('DOMContentLoaded', function(){
         statusImg = statusMessage.appendChild(document.createElement('div').appendChild(document.createElement('img'))),
         statusTxt = statusMessage.appendChild(document.createElement('div'));
 
-        console.log(statusImg);
         
         statusMessage.classList.add('status');
         statusTxt.classList.add('status-txt');
@@ -358,6 +357,7 @@ window.addEventListener('DOMContentLoaded', function(){
     let persons = document.querySelectorAll('.counter-block-input')[0],
         restDays = document.querySelectorAll('.counter-block-input')[1],
         place =  document.getElementById('select'),
+        placeMod = +place.options[place.selectedIndex].value,
         totalValue =  document.getElementById('total'),
         personsSum = 0,
         daysSum = 0,
@@ -391,13 +391,12 @@ window.addEventListener('DOMContentLoaded', function(){
         }
 
         function calcChange(activeInput, passiveInput){
-            personsSum = +activeInput.value;
-            total = (daysSum + personsSum)*4000;
-
             if(activeInput.value == '' || passiveInput.value == ''){
                 totalValue.innerHTML = 0;
             } else {
-                //totalValue.innerHTML = total;
+                personsSum = +activeInput.value;
+                daysSum = +passiveInput.value;
+                total = (daysSum + personsSum)*4000*placeMod;
 
                 spinNum(+totalValue.innerHTML, total);
             }
@@ -417,14 +416,8 @@ window.addEventListener('DOMContentLoaded', function(){
         restDays.addEventListener('change', () => {calcChange(restDays, persons)});
         
         place.addEventListener('change', function(){
-            if(restDays.value == '' || persons.value == ''){
-                totalValue.innerHTML = 0;
-            } else { 
-                let a = total;
-                //totalValue.innerHTML = a * this.options[this.selectedIndex].value;
-
-                spinNum(+totalValue.innerHTML, a * this.options[this.selectedIndex].value);
-            }
+            placeMod = +place.options[place.selectedIndex].value;
+            calcChange(persons, restDays);
         });
 
 });

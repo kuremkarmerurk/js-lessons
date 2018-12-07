@@ -1,0 +1,16 @@
+.status-img{
+    max-width: 70px;
+    margin: 10px auto;
+    display: block;
+  }
+
+.status-txt {
+    padding: 0;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 30px;
+    text-align: center;
+  }
+.status{
+    display: none;
+}  
