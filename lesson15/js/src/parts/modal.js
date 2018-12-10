@@ -51,14 +51,14 @@ function modal() {
         
         if(md.mobile() || screen.width < 993 ){
             overlay.classList.remove('fade');
-            console.log('mobile');
+            //console.log('mobile');
         }  else if(!detectIE()) {
             overlay.style.opacity = "0";
             overlay.classList.remove('fade');
             requestAnimationFrame(fade);
-            console.log('not IE');
+            //console.log('not IE');
         }  else {
-            console.log('IE');
+            //console.log('IE');
         }
 
         document.body.style.overflow = 'hidden';
@@ -76,6 +76,7 @@ function modal() {
         document.body.style.overflow = '';
         document.querySelector('.main-form').style.display = 'block';
         if (document.querySelector('.status')) { document.querySelector('.status').remove(); }
+        clearInput();
          
     });
 
@@ -120,6 +121,12 @@ function modal() {
         }
     });
 
+    function clearInput() {
+        input.forEach(function(element,index){
+            input[index].value = '';
+        });
+    }
+
     function formRequest(event,f){
         event.preventDefault();
         modalForm.style.display = 'none';
@@ -137,13 +144,7 @@ function modal() {
         });
         let json = JSON.stringify(obj);
 
-        request.send(json);
-
-        function clearInput() {
-            input.forEach(function(element,index){
-                input[index].value = '';
-            });
-        }
+        request.send(json);        
 
         function postData(){
             return new Promise(function(resolve,reject){
