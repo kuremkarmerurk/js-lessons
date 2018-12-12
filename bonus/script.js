@@ -1,4 +1,6 @@
 // Функция sum должна возвращать тип данных true. Проверить её на это.
+// True Это не тип данных!!!! Но вы сами попросили.
+let assert = chai.assert;
 
 function sum(a, b) {
 	return a + b > 10;
