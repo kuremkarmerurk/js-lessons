@@ -1,0 +1,56 @@
+.slider-arrow{
+    max-width: 50px;
+    max-height: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    opacity: 0.5;
+}
+.slider-arrow:hover{
+    opacity: 1;
+}
+
+.slider-arrow img{
+    width: 100%;
+}
+
+.card-active .card__controls-arrow{
+    opacity: 1;
+}
+
+.card{
+    position: relative;
+    min-width: 307px;
+    
+}
+
+.card-left{ 
+    animation-name: slides;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+     
+@keyframes slides {
+    0%   {  transform:translate(0)    }
+    100% {  transform:translate(-340px) }
+}
+
+
+.slider-right{
+    left: 70px;
+    transform: rotate(180deg);
+}
+
+.showup__content{
+    padding: 20px 0 20px 63px;
+}
+
+.showup__content-title{
+    padding: 20px 0;
+    position: relative;
+}
+
+.showup__content-slider{
+    padding: 20px 0 20px 20px;
+    overflow: hidden;
+}
