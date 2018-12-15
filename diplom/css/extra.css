@@ -14,25 +14,36 @@
     width: 100%;
 }
 
-.card-active .card__controls-arrow{
+.card-active .card__controls-arrow, .card-active .card__title{
     opacity: 1;
 }
 
 .card{
     position: relative;
     min-width: 307px;
-    
+    cursor: pointer;    
 }
 
 .card-left{ 
-    animation-name: slides;
-    animation-duration: 5s;
+    animation-name: slidesl;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
      
-@keyframes slides {
+@keyframes slidesl {
     0%   {  transform:translate(0)    }
-    100% {  transform:translate(-340px) }
+    100% {  transform:translate(-335px) }
+}
+
+.card-right{ 
+    animation-name: slidesr;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+     
+@keyframes slidesr {
+    0%   {  transform:translate(-335px)    }
+    100% {  transform:translate(0) }
 }
 
 

@@ -19,7 +19,11 @@ function changePage(){
                     modules.push(page.lastChild);
                 }                
             }
-            page.childNodes[0].style.display = "block";
+            if(Number(window.location.href.split('=')[1]) != NaN && Number(window.location.href.split('=')[1]) < 9){
+                page.childNodes[+window.location.href.split('=')[1] - 1].style.display = "block";
+            } else {
+                page.childNodes[0].style.display = "block";
+            }            
             modules.shift();
             modules.shift();
             
@@ -49,8 +53,6 @@ function changePage(){
             prevCounter[i].textContent = (i > 0) ? prevCounter[i].textContent.replace(/[25]/,i) : prevCounter[i].textContent.replace(/[25]/,8);
             nextCounter[i].textContent = (i < modules.length - 1) ? nextCounter[i].textContent.replace(/[47]/,i+2) : nextCounter[i].textContent.replace(/[47]/,1);
         }
-
-        console.log(nextCounter);
 
         logos.forEach((logo)=>{ 
             logo.addEventListener('click', function(){
