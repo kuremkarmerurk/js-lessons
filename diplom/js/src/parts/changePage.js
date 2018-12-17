@@ -1,6 +1,7 @@
 function changePage(){
     let page = document.querySelector('.page'),
         slides = [...page.childNodes],
+        ticher = document.querySelector('.hanson'),
         logos = [...page.querySelectorAll('.logo')],
         buttons = [...page.querySelectorAll('.next')];
 
@@ -24,8 +25,12 @@ function changePage(){
                 slides[index].style.display = "none";
                 if(index+1 < slides.length){
                     slides[index+1].style.display = "block";
+                    if(index + 2 == 3){
+                        ticher.classList.add('fadeIn');
+                    }
                 } else {
                     slides[0].style.display = "block";
+                    ticher.classList.remove('fadeIn');
                 }
             });
         });
