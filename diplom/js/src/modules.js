@@ -1,8 +1,10 @@
 window.addEventListener('DOMContentLoaded', function(){
     'use strict';
-    let changePage = require('./parts/changeModules');
+    let showVideo = require('./parts/video.js'),
+        changePage = require('./parts/changeModules');
 
 
-
+    
     changePage();
+    showVideo();
 });
