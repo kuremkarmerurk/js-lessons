@@ -111,6 +111,14 @@
 
 .fadeIn{animation:fadeIn 1s forwards}
 
+.loremIpsum{
+    margin-top: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+    letter-spacing: -.28px;
+}
+
 @keyframes fadeIn{
     0%{opacity:0;transform:scale(0)}
     100%{opacity:1;transform:scale(1)}

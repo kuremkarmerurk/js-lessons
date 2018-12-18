@@ -9,7 +9,6 @@ function showVideo(){
         play;
 
         overlay.style.zIndex = "100";
-        console.log(moduleApp);
     
     if(showup){
         play = showup.querySelector('.play');
@@ -26,7 +25,6 @@ function showVideo(){
             videoItem = [...moduleApp.querySelectorAll('.module__video-item')];
         playModule.forEach((element,index)=>{
             play = element;
-            console.log(element);
             if(index % 2 == 0){
                 element.addEventListener('click',()=>{
                     

@@ -89,6 +89,10 @@ function mainSlider(){
             });
         });
 
+        setInterval(()=>{
+            if(!noclick){sliderLeft(slides2,slider2,'card');}
+        },4000);
+
         arrowRight.addEventListener('click', function(){
             if(!noclick){sliderRight(slides,slider,'card');}  
         });
